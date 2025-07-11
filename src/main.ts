@@ -1,4 +1,4 @@
-// https://framagit.org/roipoussiere/strudel-vscode <- sturdel vscode extension with syntax highlighting
+// https://framagit.org/roipoussiere/strudel-vscode <- strudel vscode extension with syntax highlighting
 // https://www.checklyhq.com/blog/customizing-monaco/ <- adding custom languages to monaco
 
 import tsWorker from "monaco-editor/esm/vs/language/typescript/ts.worker?worker";
