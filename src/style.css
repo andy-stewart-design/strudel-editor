@@ -1,0 +1,33 @@
+:where(*, *::before, *::after) {
+  box-sizing: border-box;
+}
+
+:where(html, body) {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #011627;
+}
+
+#app {
+  height: 100%;
+  padding-block-start: 1.25rem;
+}
+
+.playback-controls {
+  position: fixed;
+  top: 1.25rem;
+  right: 1.25rem;
+  display: flex;
+  gap: 0.5rem;
+
+  & > button {
+    min-width: 9ch;
+    border: none;
+    border-radius: 100vmax;
+    padding-block: 0.25rem;
+    margin: 0;
+    font-size: 0.8125rem;
+    font-weight: 500;
+  }
+}
