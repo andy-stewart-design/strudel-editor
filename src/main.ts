@@ -6,7 +6,7 @@ import * as monaco from "monaco-editor";
 import theme from "./theme.ts";
 // @ts-expect-error need to add strudel declaration file
 import { prebake } from "./strudel.js";
-import tune from "./tune";
+import defaultBop from "./boots-and-cats.ts";
 import "./style.css";
 
 const strudel = await prebake();
@@ -20,7 +20,7 @@ self.MonacoEnvironment = {
 monaco.editor.defineTheme("NightOwl", theme);
 
 const editor = monaco.editor.create(document.getElementById("app")!, {
-  value: tune,
+  value: defaultBop,
   language: "typescript",
   theme: "NightOwl",
   minimap: {

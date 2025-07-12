@@ -22,6 +22,8 @@
   gap: 0.75rem;
 
   & > button {
+    --opacity: 0;
+
     border: none;
     border-radius: 100vmax;
     padding: 0.625rem;
@@ -29,17 +31,31 @@
     font-weight: 500;
     color: #011627;
 
+    &[aria-label="play"] {
+      [data-icon="update"] {
+        opacity: 0;
+      }
+    }
+
     &[aria-label="update"] {
-      outline: 6px solid rgb(255 255 255 / 0.25);
+      animation: pulse 500ms infinite alternate;
+
+      [data-icon="play"] {
+        opacity: 0;
+      }
     }
 
     svg {
       vertical-align: bottom;
     }
+  }
+}
 
-    &#play {
-      padding-inline: 0.638rem 0.6125rem;
-      /* margin-inline-start: 8px -8px; */
-    }
+@keyframes pulse {
+  from {
+    outline: 4px solid rgb(255 255 255 / 0);
+  }
+  to {
+    outline: 4px solid rgb(255 255 255 / 0.375);
   }
 }
