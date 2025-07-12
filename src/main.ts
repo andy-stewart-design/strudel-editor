@@ -46,7 +46,7 @@ const playButton = document.querySelector("#play");
 const pauseButton = document.querySelector("#pause");
 
 function handlePlay() {
-  if (playButton && !playing) playButton.innerHTML = "Update";
+  if (playButton && !playing) playButton.ariaLabel = "update";
   strudel.evaluate(editor.getValue());
   playing = true;
 }
@@ -54,7 +54,7 @@ function handlePlay() {
 function handlePause() {
   strudel.stop();
   playing = false;
-  if (playButton) playButton.innerHTML = "Play";
+  if (playButton) playButton.ariaLabel = "play";
 }
 
 playButton?.addEventListener("click", handlePlay);

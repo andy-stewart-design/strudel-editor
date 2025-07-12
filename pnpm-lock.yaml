@@ -11,6 +11,9 @@ importers:
       '@strudel/core':
         specifier: ^1.2.2
         version: 1.2.2
+      '@strudel/midi':
+        specifier: ^1.2.3
+        version: 1.2.3
       '@strudel/mini':
         specifier: ^1.2.2
         version: 1.2.2
@@ -301,6 +304,9 @@ packages:
 
   '@strudel/draw@1.2.2':
     resolution: {integrity: sha512-0Vmva6lc51L4rDcLwpGeoQ14t1/2RoyzhI6Sfa3drTALa69E3Jg2bn4o/sZgaifNRkPJhbIOdCqIVcir69Aj6w==}
+
+  '@strudel/midi@1.2.3':
+    resolution: {integrity: sha512-6WClxFeEcDQ4E6Vp6T0EsuL/Q98cUqT/++GeG13ntkCumnGoLYcHye/B62YW8mYDoW1UfBJwpYHIqtVO3FunGg==}
 
   '@strudel/mini@1.2.2':
     resolution: {integrity: sha512-kMGdAp6J6dI6oZijQdobVn/STt8bNQkMNcwe341E2gnRvz3S3KbYAKRVvAKrm9jFzy1zoL4F+a1BnqoOqlOPDw==}
@@ -718,6 +724,12 @@ snapshots:
   '@strudel/draw@1.2.2':
     dependencies:
       '@strudel/core': 1.2.2
+
+  '@strudel/midi@1.2.3':
+    dependencies:
+      '@strudel/core': 1.2.2
+      '@strudel/webaudio': 1.2.3
+      webmidi: 3.1.12
 
   '@strudel/mini@1.2.2':
     dependencies:
