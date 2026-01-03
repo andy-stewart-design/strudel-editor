@@ -12,9 +12,7 @@ import "./style.css";
 const strudel = await prebake();
 
 self.MonacoEnvironment = {
-  getWorker() {
-    return new tsWorker();
-  },
+  getWorker: () => new tsWorker(),
 };
 
 monaco.editor.defineTheme("NightOwl", theme);
